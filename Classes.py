@@ -136,17 +136,37 @@ class Music_festival:
         self.music_style=music_style
         self.instrument=instrument
 class Artist(Music_festival):
-    def __init_subclass__():
-        return super().__init_subclass__()
+    def __init__(self, artist_name, country, music_style, instrument):
+        super().__init__(artist_name, country, music_style, instrument)
+        if artist_name=="X":
+            return "will perform for 2hours"
+        elif artist_name=="y":
+            return "will perform for 3 hours"
+        elif artist_name=="Z":
+            return "will perform for 1 hour"
+        else:
+            return "no perfomance"
 
 class Perfomance(Music_festival):
-    def __init_subclass__():
-        return super().__init_subclass__()
-    
+   def __init__(self, artist_name, country, music_style, instrument):
+       super().__init__(artist_name, country, music_style, instrument)
+         
+        if Perfomance=="Bongo songs":
+            return "will be intresting"
+        elif Perfomance=="Country songs":
+            return "will  be boring"
+        elif Perfomance=="RMB":
+            return "will be fun"
+        else:
+            return "no perfomance"
+       
 class Stage(Music_festival):
-    def __init_subclass__():
-        return super().__init_subclass__()
-    
+   def __init__(self, artist_name, country, music_style, instrument):
+       super().__init__(artist_name, country, music_style, instrument)
+       if stage=="big":
+           return "it will be intresting"
+       elif stage ==="small":
+           return "boring"
     
 # Create a class called Product with attributes for name, price, and quantity.
 # Implement a method to calculate the total value of the product (price * quantity).
